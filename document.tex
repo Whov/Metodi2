@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{citecolor=DarkScarlet}
+\hypersetup{linkcolor=DarkRed}
+\usepackage{cleveref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%opening
+\title{Bulleted list di fatti di Metodi 2}
+\author{Bruno Bucciotti}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Faccio un elenco dei fatti di metodi 2 che tendevo a scordarmi (e che quindi mi sono trascritto sotto forma di elenco puntato su un foglio che sto per buttare) e che mi sono sembrati fra i più utili (salto quelli stranoti come il teorema dei residui). Non ambisco alla benchè minima completezza, semplicemente se non sapete alcune di queste cose potreste volerle vedere prima dell'esame. Cito anche qualche trick o qualche errore frequente.
+\end{abstract}
+
+\section{Fatti}
+
+\begin{itemize}
+	\item Residuo all'infinito: Res(f(z), $\infty$) = -Res($\frac{1}{z^2}$f($\frac{1}{z}$),  0). Per ricordarlo pensare al fatto che il residuo è in realtà legato a f(z)dz e si fa una inversione $z\rightarrow \dfrac{1}{z}$
+	\item Gli spazi $\mathbf{L}^1,\,\mathbf{L}^2$ sono contenuti in $S'$, duale dello spazio delle funzioni che decadono più rapidamente di ogni polinomio
+	\item Sia T operatore da determinare con $xT = 1$, allora $T = c_1\delta(x) + P(\frac{1}{x})$, dove la delta viene dalla soluzione dell'omogenea associata. La parte principale serve poichè effettivamente il polo è sull'asse reale
+	\item $\lim_{\epsilon \to 0^+} \dfrac{1}{x\pm i \epsilon} = P(\frac{1}{x}) \mp i \pi \delta(x)$ : la parte reale si ricorda al volo ponendo $\epsilon=0$, l'esistenza di una parte immaginaria non dovrebbe stupire (basti pensare alle relazioni di Kramers-Kronig). Per ricavarla si può utilizzare o kramers-kronig direttamente oppure in 2 passi: convincersi che sia $-iC\delta(x)$ facendo un grafico con $\epsilon$ finito, poi ricavare $C$ integrando la parte immaginaria di $\dfrac{1}{x\pm i \epsilon}$
+	\item $\mathcal{F}[\theta(\pm x)] = \pm i P(\frac{1}{\omega}) + \pi \delta(\omega)$
+	\item (Su questo le ipotesi potrebbero essere riviste? Di sicuro sono sufficienti)f(z) analitica su un aperto connesso A, e sia dato un B con:
+	\begin{enumerate}
+		\item $f(\partial A) = \partial B$, cioè il bordo di A va nel bordo di B
+		\item c'è un punto di A (interno) che va in un punto interno a B
+	\end{enumerate}
+	allora f(A) = B suriettivamente
+	\item $\delta^{(n)} (x) x^n = (-1)^n n! \delta(x)$ dove si sta parlando della derivata della delta. Si fa per parti
+\end{itemize}
+
+\section{Altro}
+
+\begin{itemize}
+	\item Se il polo è di ordine maggiore di 1, ricordarsi di espandere anche il numeratore
+	\item Negli integrali che si hanno trasformando in fourier, contenenti un fattore $e^{\pm i\omega t}$, distinguere i 2 casi dati dal segno del parametro ($t$ o $\omega$ a seconda): normalmente si deve chiudere il contorno a seconda nel semipiano superiore o inferiore
+	\item Ricordare che, data una equazione operatoriale e affermata la soluzione, questa deve essere verificata integrando contro una funzione di prova
+\end{itemize}
+
+\end{document}
